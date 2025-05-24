@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de HTML</title>
+    <!--Enlace al archivo CSS externo-->
+    <link rel="stylesheet" href="estilos.css">
+     
+    <style>
+       body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+           }
+
+       main {
+      flex: 3;
+      padding: 20px;
+        }
+
+      aside {
+      flex: 1;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 1px solid #ccc;
+       }
+
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse; /* Para que los bordes no se dupliquen */
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+     .resaltado {
+      color: red;
+      font-weight: bold;
+    }
+
+    .caja {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+
+  </style>
+</head>
+<body>
+    <main>
+    <!--Punto 2-->
+    <h1>FUNDAMENTOS DE HTML</h1>
+    <p>Este espacio es para la práctica
+        de los fundamentos en Html
+    </p>
+    <!--Punto 3-->
+    <ol>
+        <h3>Pasos para aprender Html</h3>
+        <li>Entender los conceptos básicos</li>
+        <li>Practicar la sintaxis y las etiquetas</li>
+        <li>Aprender a combinar HTML con CSS</li>
+    </ol>
+    <br>
+    <br>
+    <!--Punto 4-->
+    <figure>
+       <img src="./programador imagen.jpg" width="200px" height="200px" alt="Aprendiendo a programar">
+       <figcaption style="text-align: left;">Aprendiendo a programar</figcaption>
+    </figure>
+     <br>
+    <br>
+
+    <!--Punto 5-->
+    <a href="https://www.sena.edu.co" target="_blank">Bienvenido a la pagina oficial del SENA</a>
+     <br>
+    <br>
+
+    <!--Punto 6-->
+    <table>
+      <thead>
+        <tr>
+         <th>Nombre Curso</th>
+         <th>Creditos</th>
+         <th>Pre requisitos</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>Matemáticas Generales</td>
+         <td>4</td>
+         <td>No</td>
+       </tr>
+       <tr>
+         <td>Cálculo 1</td>
+         <td>4</td>
+         <td>Matemáticas Generales</td>
+    </tr>
+    </table>
+    <br>
+    
+    <!--Punto 7-->
+    <p>
+     Este es un párrafo con una palabra <span class="resaltado">resaltada</span> usando la etiqueta <code>&lt;span&gt;</code>.
+    </p>
+    <br>
+
+    <div class="caja">
+    Este texto está dentro de un <code>&lt;div&gt;</code> que actúa como un contenedor separado para organizar el contenido.
+    </div>
+
+    <!--Punto 8, ejemplo especificado de como usar la etiqueta link, ver en la parte superior <head>-->
+       <h1>Bienvenido a mi sitio web</h1>
+       <p>Este texto será estilizado por el archivo estilos.css.</p>
+       <br>
+
+       <hr>
+
+    <!--Punto 9: section y artcle--> 
+    <section>
+        <article>
+            <h2>Geometría Analítica</h2>
+            <p>La geometría analítica es una rama de las matemáticas,
+                dedicada al estudio en profundidad de las figuras geométricas
+                y sus respectivos datos, tales como áreas, distancias, volúmenes,
+                puntos de intersección, ángulos de inclinación, etcétera. 
+                Para ello emplea técnicas básicas de análisis matemático
+                  y de álgebra.
+
+            </p>
+        </article>
+    </section>
+    <hr>
+    <hr>
+    <!--Punto 11, Formulario-->
+    <form action="">
+        <H2>Formulario</H2>
+        <label for="nombre" style="display: inline-block; width: 150px; color: rgb(9, 28, 44);">Nombre:</label>
+        <input type="text" placeholder="Escriba el Nombre completo" id="nombre" name="nombre" style="background: white; width: 10px solid black; border-radius: 10px; padding: 10px;"/>
+        <br>
+        <br>
+        <label for="correo" style="display: inline-block; width: 150px; color: rgb(13, 21, 29)" >Correo:</label>
+        <input type="email" placeholder="ejemplo@exaplle.com" id="correo" name="correo" style="background: white; width: 10px solid black; border-radius: 10px; padding: 10px;"/>
+        <br>
+        <br>
+        <button type="submit" value="Enviar" style="background: violet; ">Enviar</button>
+        <br>
+        <br>
+        <label for="interes" style="display: inline-block; width: 150px; color: black;">Comentarios:: </label>
+        <textarea id="comentarios" rows="20" name="comentarios" style="width: 300px ; height: 200px;"></textarea>
+
+        <h2>Seleccione su género: </h2>
+        <label>
+          <input type="radio" name="genero" value="masculino">
+            Masculino
+        </label><br>
+
+        <label>
+          <input type="radio" name="genero" value="femenino">
+           Femenino
+        </label><br>
+
+        <label>
+          <input type="radio" name="genero" value="otro">
+           Otro
+          </label>
+        <br>
+        <br>
+        <br>
+        <label for="aceptacion">Aceptación de términos y condiciones:</label>
+        <br>
+        <br>
+        <input type="checkbox" id="acepto" name="aceptacion" value="acepto"/>
+        <label for="aceptaciontyc">Acepto</label>
+        <br>
+        <br>
+        <button type="submit" value="Enviar">Enviar</button>
+
+    </form>
+
+    </main>
+    <!--Punto 10, añadir un <aside> -->
+    <aside>
+       <ul>
+         <li><a href="#">Programacion</a></li>
+         <br>
+         <br>
+         <li><a href="#">Sena</a></li>
+         <br>
+         <br>
+         <li><a href="#">Tecnólogo</a></li>
+       </ul>
+    </aside>
+
+    
+    
+
+</body>
+</html>
